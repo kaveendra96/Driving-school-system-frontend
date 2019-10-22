@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Link,Route} from 'react-router-dom';
 import TraineerTable from './Admin-component/Traineer-table';
 import StudentTable from './Admin-component/Student-table';
+import Profile from './Admin-component/Student-list/Student-Profile/Profile';
 class Admin extends Component{
     render(){
         return(
@@ -18,6 +19,7 @@ class Admin extends Component{
 
                     <Route path="/admin/traineer" component={TraineerTable}/>
                     <Route path="/admin/student"  component={StudentTable} />
+                    <Route path="/admin/student/profile" component={Profile}/>
 
 
 
