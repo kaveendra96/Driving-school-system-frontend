@@ -6,8 +6,8 @@ class StudentTable extends Component{
     render(){
         
         return(
-          <div className="container">
-                <h4 style={{textAlign:'center'}}>Student list</h4>
+          <div className="container ">
+               
                 <StudentList/>
               
 

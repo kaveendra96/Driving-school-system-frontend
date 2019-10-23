@@ -1,11 +1,12 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
 
 class StudentList extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
           error: null,
-          products: [{"id":"1","product_name":"nipun","sku":"test","price":"3443"}]
+          products: [{"id":"1","product_name":"nipun","sku":"test","price":"3443"},{"id":"2","product_name":"nipun","sku":"test","price":"3443"}]
         }
       }
       componentDidMount() {
@@ -37,24 +38,30 @@ class StudentList extends React.Component{
           )
         } else {
           return(
-            <div>
-              <h2>Product List</h2>
-              <table>
+            <div className=" p-4 center">
+              
+              <table className="table table-dark p-4 m-4">
                 <thead>
                   <tr>
-                    <th>#ID</th>
-                    <th>Product Name</th>
-                    <th>SKU</th>
-                    <th>Price</th>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Student  Name</th>
+                    <th scope="col">Student Age</th>
+                    <th scope="col">Price</th>
                   </tr>
                 </thead>
                 <tbody>
                   {products.map(product => (
                     <tr key={product.id}>
-                      <td>{product.id}</td>
+                      <td scope="row">{product.id}</td>
                       <td>{product.product_name}</td>
                       <td>{product.sku}</td>
                       <td>{product.price}</td>
+                      <td>
+                        <div className="progress">
+                          <div className="progress-bar progress-bar-striped" role="progressbar" style={{width:'10%'}} aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </td>
+                      <td><div className="btn btn-primary"> View Profile</div></td>
                     </tr>
                   ))}
                 </tbody>
