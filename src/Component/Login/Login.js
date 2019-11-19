@@ -45,7 +45,7 @@ class Login extends React.Component{
                                 
                                 <input type="password" className="form-control" id="password"  placeholder="Password"></input>
                             </div>
-                            <button type="submit" className="btn btn-primary btn-lg btn-block mt-4">Login</button>
+                            <Link  to="/admin" className="btn btn-primary btn-lg btn-block mt-4" onClick={() => this.closeModal()}>Login</Link>
                             <Link to="/" className="btn btn-outline-danger btn-lg btn-block" onClick={() => this.closeModal()}>Close</Link>
                         </form>
                     </div>
